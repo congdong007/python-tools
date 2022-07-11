@@ -1,0 +1,3 @@
+python .\bitcoinCrawler.py
+pause
+
