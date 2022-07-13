@@ -11,7 +11,13 @@ import os
 import urllib.request
 from header.replheader import *
  
-base_url = 'https://www.voanews.com/podcast/?zoneId=6932'
+#base_url = 'https://www.voanews.com/podcast/?zoneId=6932'
+base_arrays = [
+               'https://www.voanews.com/podcast/?zoneId=6932',
+               'https://www.voanews.com/podcast/?zoneId=6951',
+               'https://www.voanews.com/podcast/?zoneId=5082',
+               'https://www.voanews.com/podcast/?zoneId=1469'
+              ]
 
 def downloadFiles(url,filename):
     if url == None: 
@@ -64,10 +70,12 @@ def parseHtml(html,filename):
 
 
 def getAllMp3():
-    filename = 'cradiointer'          
-    html = get_html(base_url)
-    if html != None :
-        parseHtml(html,filename)
+    filename = 'cradiointer'   
+    for url in base_arrays:
+        print(url+'\n')    
+        html = get_html(url)
+        if html != None :
+            parseHtml(html,filename)
 
 def main():
     getAllMp3()
