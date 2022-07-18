@@ -2,10 +2,9 @@
 #     This file used to capture screen and audio to mp4 file
 #
 #
-#     write by Dong Cong 2018-01-23
+#     wrote by Dong Cong 2018-01-23 montreal,QC
 #
 #    
-#     Copyright by Dong Cong
 #      
 from pickle import TRUE
 import pyaudio

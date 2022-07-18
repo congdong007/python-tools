@@ -11,7 +11,6 @@ import os
 import urllib.request
 from header.replheader import *
  
-#base_url = 'https://www.voanews.com/podcast/?zoneId=6932'
 base_arrays = [
                'https://www.voanews.com/podcast/?zoneId=6932',
                'https://www.voanews.com/podcast/?zoneId=6951',
@@ -59,14 +58,7 @@ def parseHtml(html,filename):
         if os.path.exists(path) == False:
             downloadFiles(url,path)
             print(url)
-"""
-    soup = BeautifulSoup(html, 'lxml')
-    titles = soup.select('channel > item')
-    for n in titles:
-        encls = n.find_all('enclosure')
-        if encls != None:
-            print(str(encls))
-"""            
+       
 
 
 def getAllMp3():
